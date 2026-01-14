@@ -60,7 +60,7 @@ export default function ContactPage() {
                                 <Phone className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="font-bold mb-2">Phone</h3>
-                            <p className="text-gray-600 text-sm">+971 50 123 4567</p>
+                            <p className="text-gray-600 text-sm">06 556 8682</p>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
                             <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
@@ -74,7 +74,9 @@ export default function ContactPage() {
                                 <MapPin className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="font-bold mb-2">Location</h3>
-                            <p className="text-gray-600 text-sm">Dubai, UAE</p>
+                            <p className="text-gray-600 text-sm">
+                                JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                            </p>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
                             <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
@@ -136,7 +138,7 @@ export default function ContactPage() {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent"
-                                        placeholder="+971 50 123 4567"
+                                        placeholder="06 556 8682"
                                     />
                                 </div>
                                 <div>
@@ -189,14 +191,16 @@ export default function ContactPage() {
                                         <MapPin className="h-5 w-5 text-brand-red flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="font-semibold">Address</p>
-                                            <p className="text-gray-600">Dubai, United Arab Emirates</p>
+                                            <p className="text-gray-600">
+                                                JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <Phone className="h-5 w-5 text-brand-red flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="font-semibold">Phone</p>
-                                            <p className="text-gray-600">+971 50 123 4567</p>
+                                            <p className="text-gray-600">06 556 8682</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -223,7 +227,7 @@ export default function ContactPage() {
                                     For urgent inquiries or bulk orders, call us directly and speak with our parts specialists.
                                 </p>
                                 <a
-                                    href="tel:+971501234567"
+                                    href="tel:065568682"
                                     className="inline-block bg-brand-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                                 >
                                     Call Now
@@ -240,7 +244,9 @@ export default function ContactPage() {
                     <div className="text-center">
                         <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                         <p className="text-gray-500">Map Location</p>
-                        <p className="text-sm text-gray-400">Dubai, UAE</p>
+                        <p className="text-sm text-gray-400">
+                            JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                        </p>
                     </div>
                 </div>
             </section>

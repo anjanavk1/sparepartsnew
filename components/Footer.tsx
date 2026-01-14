@@ -20,8 +20,9 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold mb-3">Contact</h4>
                         <p className="text-sm text-gray-500">
-                            Dubai, UAE<br />
-                            +971 50 123 4567<br />
+                            JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM<br />
+                            Industrial Area 10 - Industrial Area - Sharjah<br />
+                            06 556 8682<br />
                             info@jesrparts.com
                         </p>
                     </div>
