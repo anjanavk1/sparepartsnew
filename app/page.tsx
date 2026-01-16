@@ -40,6 +40,102 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                About <span className="text-brand-red">JESR AL MANAMAH</span>
+              </h2>
+              <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                With over <span className="font-bold text-brand-red">20 years of experience</span> in the UAE automotive spare parts industry,
+                JESR AL MANAMAH has established itself as a trusted name in providing premium quality parts
+                for all major Japanese and Korean vehicle brands.
+              </p>
+              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                Our commitment to excellence, genuine products, and customer satisfaction has made us
+                a preferred choice for automotive professionals and individual customers across the UAE.
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-brand-red mb-2">20+</div>
+                  <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-brand-red mb-2">5K+</div>
+                  <div className="text-sm text-gray-600 font-medium">Products</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-brand-red mb-2">100%</div>
+                  <div className="text-sm text-gray-600 font-medium">Genuine Parts</div>
+                </div>
+              </div>
+
+              <Link href="/about">
+                <Button className="bg-brand-red hover:bg-brand-red/90">
+                  Learn More About Us
+                </Button>
+              </Link>
+            </div>
+
+            {/* Right Content - Feature List */}
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 md:p-10">
+              <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Extensive Experience</h4>
+                    <p className="text-gray-600 text-sm">Over two decades of expertise in the UAE automotive market</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Genuine & Quality Parts</h4>
+                    <p className="text-gray-600 text-sm">Only authentic spare parts from trusted manufacturers</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Wide Product Range</h4>
+                    <p className="text-gray-600 text-sm">Comprehensive inventory for all major Japanese & Korean brands</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Customer-Focused Service</h4>
+                    <p className="text-gray-600 text-sm">Dedicated support to help you find the right parts</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Brand Selection */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
