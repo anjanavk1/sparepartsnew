@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <div className="container relative z-10 mx-auto px-4 text-center">
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl">
-            <span className="block mb-2 text-brand-red">JESR AL MANAMAH</span>
+            <span className="block mb-2 text-brand-red text-2xl md:text-3xl lg:text-4xl">JESR AL MANAMAH</span>
             Premium Spare Parts for
             <br />
             <span className="text-brand-red">All Major Japanese & Korean Brands</span>
@@ -87,8 +87,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(230,57,70,0.1),transparent_50%)]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Premium Oils & Lubricants</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">Top-quality motor oils and lubricants from world-leading brands</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">Premium Lubricants</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
             {[
