@@ -67,10 +67,12 @@ export function Header() {
 
                 {/* Call Button */}
                 <div className="flex items-center gap-4">
-                    <Button variant="default" className="bg-[var(--color-brand-red)] hover:bg-red-700 hidden md:flex items-center gap-2">
-                        <Phone className="h-4 w-4" />
-                        Call Now
-                    </Button>
+                    <a href="tel:+97165568682">
+                        <Button variant="default" className="bg-[var(--color-brand-red)] hover:bg-red-700 hidden md:flex items-center gap-2">
+                            <Phone className="h-4 w-4" />
+                            Call Now
+                        </Button>
+                    </a>
                 </div>
             </div>
         </header>

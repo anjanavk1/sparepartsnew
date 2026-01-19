@@ -72,7 +72,7 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-brand-red mb-2">100%</div>
-                  <div className="text-sm text-gray-600 font-medium">Genuine Parts</div>
+                  <div className="text-sm text-gray-600 font-medium">Genuine Parts & Genuine Quality</div>
                 </div>
               </div>
 
