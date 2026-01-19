@@ -22,7 +22,7 @@ export function Footer() {
                         <p className="text-sm text-gray-500">
                             JESR AL MANAMAH AUTO SPARE PARTS TR, Near binladin signal<br />
                             Industrial Area 10 - Industrial Area - Sharjah<br />
-                            <a href="tel:065568682" className="hover:text-brand-red transition-colors">06 556 8682</a><br />
+                            <a href="tel:+97165568682" className="hover:text-brand-red transition-colors">06 556 8682</a><br />
                             <a href="mailto:info@jesrparts.com" className="hover:text-brand-red transition-colors">info@jesrparts.com</a>
                         </p>
                     </div>

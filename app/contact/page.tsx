@@ -60,7 +60,7 @@ export default function ContactPage() {
                                 <Phone className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="font-bold mb-2">Phone</h3>
-                            <a href="tel:065568682" className="text-gray-600 text-sm hover:text-brand-red transition-colors">06 556 8682</a>
+                            <a href="tel:+97165568682" className="text-gray-600 text-sm hover:text-brand-red transition-colors">06 556 8682</a>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
                             <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
@@ -200,7 +200,7 @@ export default function ContactPage() {
                                         <Phone className="h-5 w-5 text-brand-red flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="font-semibold">Phone</p>
-                                            <a href="tel:065568682" className="text-gray-600 hover:text-brand-red transition-colors">06 556 8682</a>
+                                            <a href="tel:+97165568682" className="text-gray-600 hover:text-brand-red transition-colors">06 556 8682</a>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -227,7 +227,7 @@ export default function ContactPage() {
                                     For urgent inquiries or bulk orders, call us directly and speak with our parts specialists.
                                 </p>
                                 <a
-                                    href="tel:065568682"
+                                    href="tel:+97165568682"
                                     className="inline-block bg-brand-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                                 >
                                     Call Now
