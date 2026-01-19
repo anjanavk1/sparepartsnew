@@ -60,14 +60,14 @@ export default function ContactPage() {
                                 <Phone className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="font-bold mb-2">Phone</h3>
-                            <p className="text-gray-600 text-sm">06 556 8682</p>
+                            <a href="tel:065568682" className="text-gray-600 text-sm hover:text-brand-red transition-colors">06 556 8682</a>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
                             <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Mail className="h-6 w-6 text-white" />
                             </div>
                             <h3 className="font-bold mb-2">Email</h3>
-                            <p className="text-gray-600 text-sm">info@jesrparts.com</p>
+                            <a href="mailto:info@jesrparts.com" className="text-gray-600 text-sm hover:text-brand-red transition-colors">info@jesrparts.com</a>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
                             <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-4">
@@ -75,7 +75,7 @@ export default function ContactPage() {
                             </div>
                             <h3 className="font-bold mb-2">Location</h3>
                             <p className="text-gray-600 text-sm">
-                                JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                                JESR AL MANAMAH AUTO SPARE PARTS TR, Near binladin signal - Industrial Area 10 - Industrial Area - Sharjah
                             </p>
                         </div>
                         <div className="bg-white p-6 rounded-xl shadow-sm border text-center">
@@ -192,7 +192,7 @@ export default function ContactPage() {
                                         <div>
                                             <p className="font-semibold">Address</p>
                                             <p className="text-gray-600">
-                                                JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                                                JESR AL MANAMAH AUTO SPARE PARTS TR, Near binladin signal - Industrial Area 10 - Industrial Area - Sharjah
                                             </p>
                                         </div>
                                     </div>
@@ -200,14 +200,14 @@ export default function ContactPage() {
                                         <Phone className="h-5 w-5 text-brand-red flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="font-semibold">Phone</p>
-                                            <p className="text-gray-600">06 556 8682</p>
+                                            <a href="tel:065568682" className="text-gray-600 hover:text-brand-red transition-colors">06 556 8682</a>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <Mail className="h-5 w-5 text-brand-red flex-shrink-0 mt-1" />
                                         <div>
                                             <p className="font-semibold">Email</p>
-                                            <p className="text-gray-600">info@jesrparts.com</p>
+                                            <a href="mailto:info@jesrparts.com" className="text-gray-600 hover:text-brand-red transition-colors">info@jesrparts.com</a>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -245,7 +245,7 @@ export default function ContactPage() {
                         <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
                         <p className="text-gray-500">Map Location</p>
                         <p className="text-sm text-gray-400">
-                            JESR AL MANAMAH AUTO SPARE PARTS TR, 7CXF+5GM - Industrial Area 10 - Industrial Area - Sharjah
+                            JESR AL MANAMAH AUTO SPARE PARTS TR, Near binladin signal - Industrial Area 10 - Industrial Area - Sharjah
                         </p>
                     </div>
                 </div>
