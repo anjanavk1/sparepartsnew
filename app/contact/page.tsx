@@ -238,16 +238,19 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Map Placeholder */}
+            {/* Map Section */}
             <section className="py-0">
-                <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                    <div className="text-center">
-                        <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                        <p className="text-gray-500">Map Location</p>
-                        <p className="text-sm text-gray-400">
-                            JESR AL MANAMAH AUTO SPARE PARTS TR, Near binladin signal - Industrial Area 10 - Industrial Area - Sharjah
-                        </p>
-                    </div>
+                <div className="w-full h-96 bg-gray-200">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.283120666396!2d55.426628676063!3d25.26084712911181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f0022375883%3A0x8684252684784179!2sJESR%20AL%20MANAMAH%20AUTO%20SPARE%20PARTS%20TR!5e0!3m2!1sen!2sae!4v1705668000000!5m2!1sen!2sae"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="JESR AL MANAMAH AUTO SPARE PARTS TR Location"
+                    ></iframe>
                 </div>
             </section>
         </div>
