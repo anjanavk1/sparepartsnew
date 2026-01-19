@@ -42,5 +42,7 @@ export const products: Product[] = [
   { id: '13', name: 'Spare Parts - UD Truck', brand: 'UD', category: 'Zic', sku: 'UD-TK-013', condition: 'New', image: '/vehicles/ud-truck.png' },
 
   // Batteries
-  { id: '14', name: 'Detex Battery - Maintenance Free', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-001', condition: 'New', image: '/vehicles/detex-battery.png' },
+  { id: '14', name: 'Detex Battery - Maintenance Free (NS40)', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-NS40', condition: 'New', image: '/vehicles/detex-battery.png' },
+  { id: '15', name: 'Detex Battery - Heavy Duty (N70)', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-N70', condition: 'New', image: '/vehicles/detex-battery.png' },
+  { id: '16', name: 'Detex Battery - Premium (N50)', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-N50', condition: 'New', image: '/vehicles/detex-battery.png' },
 ];

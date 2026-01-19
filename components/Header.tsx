@@ -35,25 +35,15 @@ export function Header() {
                     <Link href="/" className="text-sm font-medium transition-colors hover:text-black/80">
                         Home
                     </Link>
-                    <div className="relative group">
-                        <button className="flex items-center gap-1 text-sm font-medium transition-colors hover:text-black/80">
-                            Shop by Category <ChevronDown className="h-4 w-4" />
-                        </button>
-                        <div className="absolute top-full left-0 w-48 bg-white border shadow-md rounded-md mt-2 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-                            <div className="py-2">
-                                {categories.map((cat) => (
-                                    <Link
-                                        key={cat}
-                                        href={`/shop?category=${encodeURIComponent(cat)}`}
-                                        className="block px-4 py-2 text-sm hover:bg-gray-100"
-                                    >
-                                        {cat}
-                                    </Link>
-                                ))}
-                                <Link href="/shop" className="block px-4 py-2 text-sm font-bold border-t mt-1 hover:bg-gray-100">Browse All</Link>
-                            </div>
-                        </div>
-                    </div>
+                    <Link href="/shop?category=Lubricants" className="text-sm font-medium transition-colors hover:text-black/80">
+                        Lubricants
+                    </Link>
+                    <Link href="/shop?category=Batteries" className="text-sm font-medium transition-colors hover:text-black/80">
+                        Batteries
+                    </Link>
+                    <Link href="/shop?category=Spareparts" className="text-sm font-medium transition-colors hover:text-black/80">
+                        Spare Parts
+                    </Link>
                     <Link href="/about" className="text-sm font-medium transition-colors hover:text-black/80">
                         About Us
                     </Link>

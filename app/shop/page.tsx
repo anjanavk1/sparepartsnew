@@ -101,21 +101,13 @@ function ShopContent() {
                             </div>
 
                             <div className="mb-6 border-t pt-6">
-                                <h3 className="font-semibold mb-3 text-gray-900">Categories</h3>
+                                <h3 className="font-semibold mb-3 text-gray-900">Batteries</h3>
                                 <div className="space-y-2">
-                                    <Link href={`/shop${selectedBrand ? `?brand=${selectedBrand}` : ''}`}
-                                        className={`block text-sm py-2 px-3 rounded-lg transition-colors ${!selectedCategory ? 'font-bold bg-brand-red text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
-                                        All Categories
+                                    <Link
+                                        href={`/shop?category=Detex${selectedBrand ? `&brand=${selectedBrand}` : ''}`}
+                                        className={`block text-sm py-2 px-3 rounded-lg transition-colors ${selectedCategory === 'Detex' ? 'font-bold bg-brand-red text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+                                        Detex
                                     </Link>
-                                    {mainCategories.map(cat => (
-                                        <Link
-                                            key={cat}
-                                            href={`/shop?category=${encodeURIComponent(cat)}${selectedBrand ? `&brand=${selectedBrand}` : ''}`}
-                                            className={`block text-sm py-2 px-3 rounded-lg transition-colors ${selectedCategory === cat ? 'font-bold bg-brand-red text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
-                                            {cat}
-                                        </Link>
-                                    ))}
-                                    {/* Link to Detex directly if needed, or it's covered by Batteries */}
                                 </div>
 
                                 <h3 className="font-semibold mb-3 mt-6 text-gray-900">Lubricant Brands</h3>
