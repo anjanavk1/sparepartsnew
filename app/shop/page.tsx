@@ -14,13 +14,28 @@ function ShopContent() {
     const selectedCategory = searchParams.get('category') || undefined;
 
     const filteredProducts = products.filter((p) => {
-        if (selectedBrand && p.brand !== selectedBrand) return false;
-        if (selectedCategory && p.category !== selectedCategory) return false;
+        if (selectedBrand && p.brand !== selectedBrand && p.brand !== 'Detex' as any) return false; // Detex exception if we want to show it? No, standard filtering.
+
+        if (selectedCategory) {
+            if (selectedCategory === 'Lubricants') {
+                const lubricantBrands = ['Castrol', 'Shell', 'ADNOC', 'Total', 'Zic', 'Dufe', 'BP'];
+                return lubricantBrands.includes(p.category);
+            }
+            if (selectedCategory === 'Batteries') {
+                return p.category === 'Detex';
+            }
+            if (selectedCategory === 'Spareparts') {
+                const lubricantBrands = ['Castrol', 'Shell', 'ADNOC', 'Total', 'Zic', 'Dufe', 'BP'];
+                return !lubricantBrands.includes(p.category) && p.category !== 'Detex';
+            }
+            // Fallback for direct category links if any exist or if using exact match
+            return p.category === selectedCategory;
+        }
         return true;
     });
 
     const brands = ['Mitsubishi', 'Isuzu', 'Toyota', 'Nissan', 'Hino', 'UD', 'Hyundai', 'Kia'];
-    const categories = [
+    const lubricantBrands = [
         'Castrol',
         'Shell',
         'ADNOC',
@@ -28,6 +43,12 @@ function ShopContent() {
         'Zic',
         'Dufe',
         'BP',
+    ];
+
+    const mainCategories = [
+        'Batteries',
+        'Spareparts',
+        'Lubricants',
     ];
 
     return (
@@ -80,13 +101,26 @@ function ShopContent() {
                             </div>
 
                             <div className="mb-6 border-t pt-6">
-                                <h3 className="font-semibold mb-3 text-gray-900">Lubricants</h3>
+                                <h3 className="font-semibold mb-3 text-gray-900">Categories</h3>
                                 <div className="space-y-2">
                                     <Link href={`/shop${selectedBrand ? `?brand=${selectedBrand}` : ''}`}
                                         className={`block text-sm py-2 px-3 rounded-lg transition-colors ${!selectedCategory ? 'font-bold bg-brand-red text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
-                                        All Oils
+                                        All Categories
                                     </Link>
-                                    {categories.map(cat => (
+                                    {mainCategories.map(cat => (
+                                        <Link
+                                            key={cat}
+                                            href={`/shop?category=${encodeURIComponent(cat)}${selectedBrand ? `&brand=${selectedBrand}` : ''}`}
+                                            className={`block text-sm py-2 px-3 rounded-lg transition-colors ${selectedCategory === cat ? 'font-bold bg-brand-red text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
+                                            {cat}
+                                        </Link>
+                                    ))}
+                                    {/* Link to Detex directly if needed, or it's covered by Batteries */}
+                                </div>
+
+                                <h3 className="font-semibold mb-3 mt-6 text-gray-900">Lubricant Brands</h3>
+                                <div className="space-y-2">
+                                    {lubricantBrands.map(cat => (
                                         <Link
                                             key={cat}
                                             href={`/shop?category=${encodeURIComponent(cat)}${selectedBrand ? `&brand=${selectedBrand}` : ''}`}

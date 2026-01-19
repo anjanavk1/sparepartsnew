@@ -2,7 +2,7 @@ export type Product = {
   id: string;
   name: string;
   brand: 'Mitsubishi' | 'Isuzu' | 'Toyota' | 'Nissan' | 'Hino' | 'UD' | 'Hyundai' | 'Kia';
-  category: 'Castrol' | 'Shell' | 'ADNOC' | 'Total' | 'Zic' | 'Dufe' | 'BP';
+  category: 'Castrol' | 'Shell' | 'ADNOC' | 'Total' | 'Zic' | 'Dufe' | 'BP' | 'Detex' | 'Spareparts';
   price?: number;
   image?: string;
   sku: string;
@@ -40,4 +40,7 @@ export const products: Product[] = [
 
   // UD Products (keeping existing)
   { id: '13', name: 'Spare Parts - UD Truck', brand: 'UD', category: 'Zic', sku: 'UD-TK-013', condition: 'New', image: '/vehicles/ud-truck.png' },
+
+  // Batteries
+  { id: '14', name: 'Detex Battery - Maintenance Free', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-001', condition: 'New', image: '/vehicles/detex-battery.png' },
 ];

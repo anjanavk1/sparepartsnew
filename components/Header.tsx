@@ -8,12 +8,9 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const categories = [
-    'Castrol',
-    'Shell',
-    'ADNOC',
-    'Total',
-    'Zic',
-    'Dufe',
+    'Batteries',
+    'Spareparts',
+    'Lubricants',
 ];
 
 export function Header() {
