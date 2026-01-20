@@ -64,6 +64,8 @@ function ShopContent() {
             { name: 'Steering System', image: '/categories/steering-system.png' },
         ];
 
+        const isSubcategoryView = !!searchParams.get('subcategory');
+
         return (
             <div className="min-h-screen bg-white">
                 {/* Hero Section */}
@@ -71,7 +73,7 @@ function ShopContent() {
                     <div className="absolute inset-0 opacity-20 bg-[url('/pattern.png')]"></div>
                     <div className="container mx-auto px-4 relative z-10">
                         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                            Top-Quality <span className="text-brand-red">Auto Spare Parts</span>
+                            {isSubcategoryView ? searchParams.get('subcategory') : <>Top-Quality <span className="text-brand-red">Auto Spare Parts</span></>}
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
                             Reliable, durable, and high-performance parts for every vehicle needs.
@@ -79,72 +81,84 @@ function ShopContent() {
                     </div>
                 </section>
 
-                {/* Browse by Category */}
-                <section className="py-20 container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Browse by Category</h2>
-                        <div className="h-1 w-24 bg-brand-red mx-auto rounded-full"></div>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                        {sparePartSubcategories.map((sub) => (
-                            <Link href={`/shop?category=Spareparts&subcategory=${encodeURIComponent(sub.name)}`} key={sub.name} className="group cursor-pointer">
-                                <div className="bg-gray-50 rounded-2xl p-6 border-2 border-transparent group-hover:border-brand-red/20 group-hover:shadow-lg transition-all duration-300 text-center h-full flex flex-col items-center justify-center aspect-square">
-                                    <div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden relative">
-                                        <Image
-                                            src={sub.image}
-                                            alt={sub.name}
-                                            fill
-                                            className="object-contain p-2"
-                                        />
-                                    </div>
-                                    <h3 className="font-bold text-gray-900 group-hover:text-brand-red transition-colors">{sub.name}</h3>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </section>
-
-                {/* Featured Products (Filtered List) */}
-                <section className="py-20 bg-gray-50">
-                    <div className="container mx-auto px-4">
+                {/* Browse by Category - Hide on subcategory pages */}
+                {!isSubcategoryView && (
+                    <section className="py-20 container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Products</h2>
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Browse by Category</h2>
                             <div className="h-1 w-24 bg-brand-red mx-auto rounded-full"></div>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {filteredProducts.slice(0, 8).map((product) => (
-                                <div key={product.id} className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                                    <div className="aspect-square bg-white p-6 flex items-center justify-center relative border-b">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                            {sparePartSubcategories.map((sub) => (
+                                <Link href={`/shop?category=Spareparts&subcategory=${encodeURIComponent(sub.name)}`} key={sub.name} className="group cursor-pointer">
+                                    <div className="bg-gray-50 rounded-2xl p-6 border-2 border-transparent group-hover:border-brand-red/20 group-hover:shadow-lg transition-all duration-300 text-center h-full flex flex-col items-center justify-center aspect-square">
+                                        <div className="w-24 h-24 bg-white rounded-full shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden relative">
+                                            <Image
+                                                src={sub.image}
+                                                alt={sub.name}
+                                                fill
+                                                className="object-contain p-2"
+                                            />
+                                        </div>
+                                        <h3 className="font-bold text-gray-900 group-hover:text-brand-red transition-colors">{sub.name}</h3>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
+                {/* Products List */}
+                <section className="py-20 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">{isSubcategoryView ? 'Products' : 'Featured Products'}</h2>
+                            <div className="h-1 w-24 bg-brand-red mx-auto rounded-full"></div>
+                        </div>
+
+                        <div className={`grid grid-cols-1 sm:grid-cols-2 ${isSubcategoryView ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-8`}>
+                            {filteredProducts.slice(0, isSubcategoryView ? 100 : 8).map((product) => (
+                                <div key={product.id} className="bg-white border text-center border-gray-200 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                                    <div className="aspect-square bg-white relative items-center justify-center flex overflow-hidden p-8 border-b border-gray-100">
                                         {/* Product Image */}
                                         {product.image ? (
                                             <Image
                                                 src={product.image}
                                                 alt={product.name}
                                                 fill
-                                                className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                                                className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
                                             />
                                         ) : (
-                                            <div className="text-gray-400 font-medium">No Image</div>
+                                            <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-50">
+                                                {product.name}
+                                            </div>
                                         )}
                                     </div>
-                                    <div className="p-6">
-                                        <div className="text-xs text-brand-red font-bold uppercase mb-2">{product.brand}</div>
-                                        <h3 className="font-bold text-gray-900 mb-2 truncate">{product.name}</h3>
-                                        <Link href={`/product/${product.id}`}>
-                                            <Button className="w-full bg-gray-900 hover:bg-brand-red text-white transition-colors mt-4">View Details</Button>
-                                        </Link>
+                                    {/* Orange Footer Style */}
+                                    <div className="bg-[#e65100] p-4 text-white flex flex-col justify-between flex-grow min-h-[120px]">
+                                        <h3 className="font-bold text-lg leading-tight mb-4 uppercase text-left">{product.name}</h3>
+
+                                        <div className="flex items-center justify-between mt-auto">
+                                            <span className="text-sm font-medium">Request Quote</span>
+                                            <Link href={`/product/${product.id}`}>
+                                                <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
+                                                    <div className="w-2 h-2 rounded-full bg-[#e65100]"></div>
+                                                </div>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="text-center mt-12">
-                            <Link href="/shop">
-                                <Button variant="outline" size="lg" className="border-gray-300 hover:border-brand-red hover:text-brand-red">View All Products</Button>
-                            </Link>
-                        </div>
+                        {!isSubcategoryView && (
+                            <div className="text-center mt-12">
+                                <Link href="/shop">
+                                    <Button variant="outline" size="lg" className="border-gray-300 hover:border-brand-red hover:text-brand-red">View All Products</Button>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </section>
 
