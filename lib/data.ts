@@ -50,10 +50,10 @@ export const products: Product[] = [
   // Spareparts - Engine Parts
   { id: 'ep1', name: 'Engine Mount Bush', brand: 'Toyota', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-001', condition: 'New', image: '/products/engine-mount-bush.png' },
   { id: 'ep2', name: 'Engine Front Mounting', brand: 'Nissan', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-002', condition: 'New', image: '/products/engine-front-mounting.png' },
-  { id: 'ep3', name: 'Timing Belt', brand: 'Mitsubishi', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-003', condition: 'New', image: '/products/timing-belt.png' },
-  { id: 'ep4', name: 'Engine Mounting', brand: 'Isuzu', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-004', condition: 'New', image: '/products/engine-mounting-1.png' },
-  { id: 'ep5', name: 'Engine Mounting', brand: 'Honda', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-005', condition: 'New', image: '/products/engine-mounting-2.png' },
-  { id: 'ep6', name: 'Engine Mounting', brand: 'Toyota', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-006', condition: 'New', image: '/products/engine-mounting-3.png' },
+  { id: 'ep3', name: 'Timing Belt', brand: 'Mitsubishi', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-003', condition: 'New', image: '/categories/engine-parts.png' },
+  { id: 'ep4', name: 'Engine Mounting', brand: 'Isuzu', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-004', condition: 'New', image: '/categories/engine-parts.png' },
+  { id: 'ep5', name: 'Engine Mounting', brand: 'Honda', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-005', condition: 'New', image: '/categories/engine-parts.png' },
+  { id: 'ep6', name: 'Engine Mounting', brand: 'Toyota', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-006', condition: 'New', image: '/categories/engine-parts.png' },
 
   // Spareparts - Suspension Parts
   { id: 'sp1', name: 'Link Rod', brand: 'Toyota', category: 'Spareparts', subcategory: 'Suspension Parts', sku: 'SP-SUS-001', condition: 'New', image: '/categories/suspension-parts.png' },

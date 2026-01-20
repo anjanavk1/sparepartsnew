@@ -304,8 +304,8 @@ function ShopContent() {
                         ) : (
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {filteredProducts.map((product) => (
-                                    <div key={product.id} className="bg-white border text-center border-gray-200 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
-                                        <div className="aspect-square bg-white relative items-center justify-center flex overflow-hidden p-8 border-b border-gray-100">
+                                    <div key={product.id} className="bg-white border border-gray-100 rounded-xl overflow-hidden group hover:shadow-lg hover:border-brand-red transition-all duration-300 flex flex-col">
+                                        <div className="aspect-square bg-gray-50 relative items-center justify-center flex overflow-hidden p-6 border-b border-gray-100">
                                             {/* Product Image */}
                                             {product.image ? (
                                                 <Image
@@ -315,21 +315,25 @@ function ShopContent() {
                                                     className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
                                                 />
                                             ) : (
-                                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-50">
+                                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">
                                                     {product.name}
                                                 </div>
                                             )}
                                         </div>
-                                        {/* Orange Footer Style */}
-                                        <div className="bg-[#e65100] p-4 text-white flex flex-col justify-between flex-grow min-h-[120px]">
-                                            <h3 className="font-bold text-lg leading-tight mb-4 uppercase text-left">{product.name}</h3>
 
-                                            <div className="flex items-center justify-between mt-auto">
-                                                <span className="text-sm font-medium">Request Quote</span>
-                                                <Link href={`/product/${product.id}`}>
-                                                    <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
-                                                        <div className="w-2 h-2 rounded-full bg-[#e65100]"></div>
-                                                    </div>
+                                        <div className="p-5 flex flex-col flex-grow">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <div className="text-xs text-brand-red font-bold uppercase tracking-wider">{product.brand}</div>
+                                                <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">{product.category}</div>
+                                            </div>
+                                            <h3 className="font-bold text-gray-900 text-lg mb-2 line-clamp-2">{product.name}</h3>
+                                            <div className="text-sm text-gray-500 mb-4">{product.sku}</div>
+
+                                            <div className="mt-auto">
+                                                <Link href={`/product/${product.id}`} className="w-full block">
+                                                    <Button variant="outline" className="w-full border-gray-200 hover:bg-brand-red hover:text-white hover:border-brand-red transition-colors">
+                                                        View Details
+                                                    </Button>
                                                 </Link>
                                             </div>
                                         </div>
