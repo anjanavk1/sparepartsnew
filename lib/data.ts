@@ -48,12 +48,7 @@ export const products: Product[] = [
   { id: '16', name: 'Detex Battery - Premium (N50)', brand: 'Detex' as any, category: 'Detex', sku: 'DTX-BAT-N50', condition: 'New', image: '/vehicles/detex-battery.png' },
 
   // Spareparts - Engine Parts
-  { id: 'ep1', name: 'Engine Mount Bush', brand: 'Toyota', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-001', condition: 'New', image: '/products/engine-mount-bush.png' },
-  { id: 'ep2', name: 'Engine Front Mounting', brand: 'Nissan', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-002', condition: 'New', image: '/products/engine-front-mounting.png' },
-  { id: 'ep3', name: 'Timing Belt', brand: 'Mitsubishi', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-003', condition: 'New', image: '/categories/engine-parts.png' },
-  { id: 'ep4', name: 'Engine Mounting', brand: 'Isuzu', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-004', condition: 'New', image: '/categories/engine-parts.png' },
-  { id: 'ep5', name: 'Engine Mounting', brand: 'Honda', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-005', condition: 'New', image: '/categories/engine-parts.png' },
-  { id: 'ep6', name: 'Engine Mounting', brand: 'Toyota', category: 'Spareparts', subcategory: 'Engine Parts', sku: 'SP-ENG-006', condition: 'New', image: '/categories/engine-parts.png' },
+  // Products removed per user request
 
   // Spareparts - Suspension Parts
   { id: 'sp1', name: 'Link Rod', brand: 'Toyota', category: 'Spareparts', subcategory: 'Suspension Parts', sku: 'SP-SUS-001', condition: 'New', image: '/categories/suspension-parts.png' },
