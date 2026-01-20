@@ -290,8 +290,8 @@ function ShopContent() {
                         ) : (
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {filteredProducts.map((product) => (
-                                    <div key={product.id} className="bg-white border-2 border-gray-100 rounded-xl overflow-hidden group hover:shadow-xl hover:border-brand-red transition-all duration-300">
-                                        <div className="aspect-square bg-gradient-to-br from-gray-50 to-white relative items-center justify-center flex overflow-hidden p-6">
+                                    <div key={product.id} className="bg-white border text-center border-gray-200 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                                        <div className="aspect-square bg-white relative items-center justify-center flex overflow-hidden p-8 border-b border-gray-100">
                                             {/* Product Image */}
                                             {product.image ? (
                                                 <Image
@@ -301,26 +301,23 @@ function ShopContent() {
                                                     className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
                                                 />
                                             ) : (
-                                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-100">
+                                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-50">
                                                     {product.name}
                                                 </div>
                                             )}
-                                            {product.condition === 'New' && (
-                                                <span className="absolute top-3 left-3 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full z-10">NEW</span>
-                                            )}
                                         </div>
-                                        <div className="p-5">
-                                            <div className="flex items-center justify-between mb-2">
-                                                <div className="text-xs text-brand-red font-bold uppercase tracking-wider">{product.brand}</div>
-                                                <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">{product.category}</div>
+                                        {/* Orange Footer Style */}
+                                        <div className="bg-[#e65100] p-4 text-white flex flex-col justify-between flex-grow min-h-[120px]">
+                                            <h3 className="font-bold text-lg leading-tight mb-4 uppercase text-left">{product.name}</h3>
+
+                                            <div className="flex items-center justify-between mt-auto">
+                                                <span className="text-sm font-medium">Request Quote</span>
+                                                <Link href={`/product/${product.id}`}>
+                                                    <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
+                                                        <div className="w-2 h-2 rounded-full bg-[#e65100]"></div>
+                                                    </div>
+                                                </Link>
                                             </div>
-                                            <h3 className="font-bold text-lg mb-2 line-clamp-2 min-h-[3.5rem]">{product.name}</h3>
-                                            <div className="text-sm text-gray-500 mb-4">{product.sku}</div>
-                                            <Link href={`/product/${product.id}`} className="w-full">
-                                                <Button variant="outline" className="w-full group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red transition-colors font-semibold">
-                                                    View Details
-                                                </Button>
-                                            </Link>
                                         </div>
                                     </div>
                                 ))}
